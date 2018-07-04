@@ -1,0 +1,21 @@
+spring:
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+  data:
+    rest:
+      default-media-type: application/json
+  messages:
+    encoding: UTF-8
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 9090
+  servlet:
+    context-path: /BACK
