@@ -42,7 +42,7 @@ public class UserController {
         }
     }
 
-    @GetMapping(value = "/{id}",headers = "Accept=application/json; charset=UTF-8")
+    @PostMapping(value = "/{id}",headers = "Accept=application/json; charset=UTF-8")
     public ResponseEntity<String> findById(@PathVariable("id") Long id){
         LOGGER.info("findById : {}",id);
 
@@ -78,27 +78,8 @@ public class UserController {
                 ,headers,HttpStatus.OK);
     }
 
-//    @GetMapping(value = "/findAll",headers = "Accept=application/json; charset=UTF-8")
-//    public ResponseEntity<String> findAll(){
-//        LOGGER.info("findAll");
-//
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.add("Content-Type","application/json; charset=utf-8");
-//
-//        return new ResponseEntity<String>(new JSONSerializer().prettyPrint(true).serialize(userService.findAllUser()),headers,HttpStatus.OK);
-//    }
-//
-//    @GetMapping(value = "/findAll",headers = "Accept=application/json; charset=UTF-8")
-//    public ResponseEntity<String> findAll(){
-//        LOGGER.info("findAll");
-//
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.add("Content-Type","application/json; charset=utf-8");
-//
-//        return new ResponseEntity<String>(new JSONSerializer().prettyPrint(true).serialize(userService.findAllUser()),headers,HttpStatus.OK);
-//    }
 
-    @DeleteMapping(value = "deleteById/{id}",headers = "Accept=application/json; charset=UTF-8")
+    @DeleteMapping(value = "/deleteById/{id}",headers = "Accept=application/json; charset=UTF-8")
     public ResponseEntity<String> deleteById(@PathVariable("id") Long id){
         LOGGER.info("deleteById");
 
